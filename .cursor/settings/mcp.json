@@ -1,0 +1,15 @@
+{
+    "mcpServers": {
+        "gemini-integration": {
+            "command": "python",
+            "args": ["mcp-server.py", "--project-root", "."],
+            "env": {
+                "GEMINI_ENABLED": "true",
+                "GEMINI_AUTO_CONSULT": "true",
+                "GEMINI_RATE_LIMIT": "3"
+            },
+            "disabled": false,
+            "autoApprove": ["gemini_status"]
+        }
+    }
+}

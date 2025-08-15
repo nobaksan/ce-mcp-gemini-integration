@@ -1,0 +1,23 @@
+{
+  "mcpServers": {
+    "gemini-integration": {
+      "command": "python",
+      "args": [
+        "D:\\claude-code-gemini-cli-integration-mcp\\mcp-server.py",
+        "--project-root",
+        "D:\\claude-code-gemini-cli-integration-mcp"
+      ],
+      "env": {
+        "GEMINI_ENABLED": "true",
+        "GEMINI_AUTO_CONSULT": "true",
+        "GEMINI_MODEL": "gemini-2.5-pro",
+        "GEMINI_CLI_COMMAND": "C:\\Users\\nobak\\AppData\\Roaming\\npm\\gemini.cmd"
+      },
+      "disabled": false,
+      "autoApprove": [
+        "gemini_status",
+        "consult_gemini"
+      ]
+    }
+  }
+}

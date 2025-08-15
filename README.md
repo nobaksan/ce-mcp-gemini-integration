@@ -8,6 +8,21 @@ Google Gemini CLI와 AI 코딩 도구들(Claude Code, Kiro, Cursor)을 통합하
 - **Cursor** - AI 기반 코드 에디터
 - **기타 MCP 지원 도구들**
 
+## ✨ 최신 업데이트 (v2.0)
+
+### 🚀 새로운 기능
+- **한국어 개발 워크플로우 지원**: 한국어 개발자를 위한 특화 기능
+- **요청 분석 및 개선**: 간단한 요청을 구체적인 개발 계획으로 변환
+- **스마트 코드 생성**: 단계별 구현 가이드와 실행 가능한 코드 제공
+- **통합 개발 계획**: 프로젝트 전체 아키텍처와 로드맵 자동 생성
+- **향상된 패턴 감지**: 더 정확한 한국어/영어 불확실성 패턴 인식
+
+### 🔧 개선사항
+- **성능 최적화**: 더 빠른 응답 시간과 효율적인 리소스 사용
+- **에러 처리 강화**: 더 친화적인 에러 메시지와 복구 제안
+- **설정 유연성**: 환경 변수와 JSON 설정 파일의 완벽한 통합
+- **크로스 플랫폼 지원**: Windows, Linux, macOS 모든 환경에서 안정적 동작
+
 ## 🚀 빠른 시작
 
 ### 자동 설치 (권장)
@@ -573,6 +588,14 @@ python3 -m pytest tests/ -v
 
 ## 🎯 주요 기능
 
+### 🌏 한국어 개발 워크플로우 지원
+이 Gemini MCP Integration은 한국어 개발자를 위해 특별히 설계되었습니다:
+
+- **한국어 패턴 감지**: "에러났어", "도와줘", "어떻게 해야 해" 등 자연스러운 한국어 표현 인식
+- **한국어 개발 도구**: `enhance_request`, `smart_code_generation` 등 한국어 인터페이스 제공
+- **이중 언어 지원**: 한국어와 영어 패턴을 모두 지원하여 다국어 개발 환경에 최적화
+- **한국 개발 문화 반영**: "것 같아", "아마도" 등 한국어 특유의 불확실성 표현 감지
+
 ### 자동 상담
 AI의 응답에서 다음 패턴을 감지하면 자동으로 Gemini 상담:
 
@@ -597,6 +620,39 @@ AI의 응답에서 다음 패턴을 감지하면 자동으로 Gemini 상담:
 
 ### 수동 상담
 필요시 `consult_gemini` 도구로 직접 Gemini에게 상담 요청
+
+### 🚀 개발 워크플로우 자동화
+새로 추가된 고급 기능들로 개발 프로세스를 획기적으로 개선:
+
+#### 요청 분석 및 개선 (`enhance_request`)
+```
+입력: "로그인 기능 만들고 싶어"
+출력: 
+- OAuth 2.0 구현 방안
+- 보안 고려사항 (JWT, 세션 관리)
+- 데이터베이스 스키마 설계
+- 프론트엔드 UI/UX 가이드라인
+```
+
+#### 스마트 코드 생성 (`smart_code_generation`)
+```
+입력: 개선된 요구사항 + 기술 스택
+출력:
+- 단계별 구현 가이드
+- 실행 가능한 코드 예시
+- 테스트 코드 포함
+- 배포 및 운영 가이드
+```
+
+#### 통합 개발 계획 (`enhance_user_request`)
+```
+입력: "실시간 채팅앱 만들기"
+출력:
+- 프로젝트 아키텍처 설계
+- 기술 스택 추천 및 비교
+- 개발 일정 및 마일스톤
+- 리스크 분석 및 대응 방안
+```
 
 ### 상태 관리
 - 통합 상태 및 통계 확인
@@ -640,6 +696,51 @@ AI의 응답에서 다음 패턴을 감지하면 자동으로 Gemini 상담:
 "성능 최적화가 필요한 것 같아"
 ```
 
+### 🚀 고급 개발 워크플로우 사용 예시
+
+#### 프로젝트 기획 단계
+```
+1. enhance_request 사용:
+   "쇼핑몰 웹사이트 만들고 싶어"
+   
+2. 자동 분석 결과:
+   - 사용자 인증/권한 시스템
+   - 상품 관리 시스템
+   - 결제 시스템 통합
+   - 주문 관리 및 배송 추적
+   - 관리자 대시보드
+   
+3. smart_code_generation으로 구현:
+   - React + Node.js 기반 풀스택 구조
+   - 단계별 개발 가이드
+   - 보안 및 성능 최적화 포함
+```
+
+#### 기능 개발 단계
+```
+1. enhance_user_request 사용:
+   "사용자가 상품을 장바구니에 담고 결제할 수 있게 하고 싶어"
+   
+2. 통합 개발 계획 생성:
+   - 장바구니 상태 관리 (Redux/Zustand)
+   - 결제 API 연동 (토스페이먼츠/아임포트)
+   - 주문 데이터 모델링
+   - 에러 처리 및 사용자 피드백
+   - 테스트 시나리오 작성
+```
+
+#### 문제 해결 단계
+```
+1. 자동 상담 트리거:
+   "결제 API 연동에서 CORS 에러가 계속 나는데..."
+   
+2. Gemini 자동 상담:
+   - CORS 설정 방법
+   - 프록시 서버 구성
+   - 개발/프로덕션 환경별 대응
+   - 보안 고려사항
+```
+
 ### MCP 서버 실행
 ```bash
 python3 mcp-server.py --project-root .
@@ -651,10 +752,13 @@ python3 mcp-server.py --debug
 ### AI 코딩 도구에서 사용
 MCP 서버가 실행되면 다음 도구들을 사용할 수 있습니다:
 
+#### 🤖 기본 상담 도구
+
 1. **consult_gemini** - Gemini 상담 요청
    ```
    query: "실시간 통신에 WebSocket과 gRPC 중 무엇을 사용해야 하나요?"
    context: "멀티플레이어 게임 서버 구축 중"
+   comparison_mode: true  # 구조화된 비교 형식 요청
    ```
 
 2. **gemini_status** - 통합 상태 확인
@@ -666,6 +770,34 @@ MCP 서버가 실행되면 다음 도구들을 사용할 수 있습니다:
    ```
    enable: true/false
    ```
+
+#### 🚀 고급 개발 지원 도구
+
+4. **enhance_request** - 요청 분석 및 개선
+   ```
+   user_request: "내 앱에 구글 로그인 기능 붙이고 싶어"
+   project_context: "React + Node.js 웹앱, 현재 기본 회원가입만 있음"
+   ```
+   - 간단한 요청을 구체적인 요구사항으로 변환
+   - 기술적 세부사항과 구현 방향 제시
+
+5. **smart_code_generation** - 단계별 코드 생성 가이드
+   ```
+   enhanced_request: "enhance_request로 개선된 상세 요구사항"
+   tech_stack: "React, Node.js, Express, MongoDB"
+   complexity_level: "intermediate"  # basic, intermediate, advanced
+   ```
+   - 개선된 요구사항을 바탕으로 실행 가능한 코드 가이드 제공
+   - 단계별 구현 계획과 코드 예시 포함
+
+6. **enhance_user_request** - 통합 개발 계획 생성
+   ```
+   user_request: "채팅 기능이 있는 웹앱 만들고 싶어"
+   project_info: "Python Django, PostgreSQL 사용 예정"
+   output_format: "detailed_plan"  # detailed_plan, quick_guide, step_by_step
+   ```
+   - 요청 분석부터 실행 계획까지 한 번에 처리
+   - 프로젝트 전체 구조와 구현 로드맵 제공
 
 ## ⚙️ 설정
 
@@ -796,6 +928,8 @@ python3 -m pytest tests/ --cov=. --cov-report=html
 - **도움 요청 감지**: "도와줘", "알려줘", "설명해줘" 등 자동 상담
 - **다중 도구 지원**: Claude Code, Kiro, Cursor 동시 지원
 - **Windows 최적화**: 배치 파일, PowerShell 스크립트 완비
+- **개발 워크플로우 자동화**: 요청 분석, 코드 생성, 프로젝트 계획 수립
+- **한국어 개발 지원**: 한국어 인터페이스와 한국 개발 문화 반영
 
 ## 🚨 문제 해결
 
@@ -868,6 +1002,44 @@ gemini  # 대화형 인증 진행
 ## 📄 라이선스
 
 MIT License - 자세한 내용은 LICENSE 파일을 참조하세요.
+
+## 📚 빠른 참조
+
+### 주요 명령어
+```bash
+# 서버 실행
+python3 mcp-server.py --project-root .
+
+# 디버그 모드
+python3 mcp-server.py --debug
+
+# 테스트 실행
+python3 -m pytest tests/ -v
+
+# Windows 간편 실행
+start-server.cmd
+```
+
+### 환경 변수
+```bash
+GEMINI_ENABLED=true          # Gemini 통합 활성화
+GEMINI_AUTO_CONSULT=true     # 자동 상담 활성화
+GEMINI_MODEL=gemini-2.5-flash # 사용할 Gemini 모델
+GEMINI_RATE_LIMIT=2          # 요청 간격 (초)
+GEMINI_TIMEOUT=60            # 타임아웃 (초)
+```
+
+### MCP 도구 목록
+- `consult_gemini` - 수동 Gemini 상담
+- `gemini_status` - 상태 및 통계 확인
+- `toggle_gemini_auto_consult` - 자동 상담 토글
+- `enhance_request` - 요청 분석 및 개선
+- `smart_code_generation` - 스마트 코드 생성
+- `enhance_user_request` - 통합 개발 계획
+
+### 자동 상담 트리거 키워드
+**한국어**: 에러, 버그, 문제, 도와줘, 알려줘, 어떻게, 것 같아, 아마도  
+**English**: error, bug, help, how, I think, maybe, probably, not sure
 
 ## 🙏 감사
 

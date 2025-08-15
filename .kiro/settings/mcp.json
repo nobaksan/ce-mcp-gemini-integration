@@ -16,7 +16,8 @@
       "disabled": false,
       "autoApprove": [
         "gemini_status",
-        "consult_gemini"
+        "consult_gemini",
+        "enhance_user_request"
       ]
     }
   }
